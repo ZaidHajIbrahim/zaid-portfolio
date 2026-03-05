@@ -1,20 +1,27 @@
 import { motion } from "framer-motion";
-import { GraduationCap, Briefcase } from "lucide-react";
+import { GraduationCap, Briefcase, FlaskConical } from "lucide-react";
 
 const timeline = [
+  {
+    icon: FlaskConical,
+    period: "2026",
+    title: "Master Thesis — Cognivity AI",
+    place: "Chalmers University of Technology",
+    detail: "Cybersecurity in Decentralized Machine Learning for Battery Management: Systems Threats, Detection, and Defense. Supervisors: Romaric Duvignau, Christian Fleischer.",
+  },
   {
     icon: GraduationCap,
     period: "2024 – 2026",
     title: "MSc Computer Systems & Networks / Cybersecurity",
     place: "Chalmers University of Technology",
-    detail: "Specializing in cybersecurity, distributed systems, and networked computing.",
+    detail: "Specializing in cybersecurity, distributed systems, networked computing, and secure connected systems. Expected graduation June 2026.",
   },
   {
     icon: Briefcase,
     period: "2024 – 2026",
-    title: "Teaching Assistant",
+    title: "Teaching Assistant (Two Courses)",
     place: "Chalmers University of Technology",
-    detail: "Debugging guidance, programming concepts, lab supervision, and one-on-one tutoring.",
+    detail: "Assisted students in labs and debugging; explained concepts and provided one-on-one support. Improved communication skills and structured problem-solving under time constraints.",
   },
   {
     icon: GraduationCap,

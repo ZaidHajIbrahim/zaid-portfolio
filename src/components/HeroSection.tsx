@@ -44,7 +44,7 @@ const HeroSection = () => {
           transition={{ duration: 0.6, delay: 0.7 }}
           className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-4 font-light"
         >
-          Cybersecurity & Computer Systems Engineer
+          Computer Systems &amp; Networks / Cybersecurity
         </motion.p>
 
         <motion.p
@@ -64,8 +64,8 @@ const HeroSection = () => {
         >
           {[
             { icon: Github, href: "https://github.com/ZaidHajIbrahim", label: "GitHub" },
-            { icon: Linkedin, href: "https://linkedin.com/in/zaidhajibrahim", label: "LinkedIn" },
-            { icon: Mail, href: "mailto:zaid3019@hotmail.com", label: "Email" },
+            { icon: Linkedin, href: "https://www.linkedin.com/in/zaid-hajibrahim", label: "LinkedIn" },
+            { icon: Mail, href: "mailto:zaid.ibrahim.eng@gmail.com", label: "Email" },
           ].map(({ icon: Icon, href, label }) => (
             <a
               key={label}

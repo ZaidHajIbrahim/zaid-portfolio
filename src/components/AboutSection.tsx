@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
-import { Shield, Cpu, Brain, Globe } from "lucide-react";
+import { Shield, Cpu, Brain, Wifi } from "lucide-react";
 
 const interests = [
-  { icon: Shield, label: "Cybersecurity", desc: "Threat detection & defense in decentralized systems" },
-  { icon: Brain, label: "AI & ML", desc: "Machine learning for real-world problem solving" },
-  { icon: Cpu, label: "Distributed Systems", desc: "High-performance parallel & networked computing" },
-  { icon: Globe, label: "Quantum Computing", desc: "Simulating quantum circuits & gates" },
+  { icon: Shield, label: "Cybersecurity", desc: "Secure connected systems, adversarial & federated learning threats & mitigation" },
+  { icon: Cpu, label: "Distributed Systems", desc: "Protocol design, concurrency & distributed architectures (Erlang, Go)" },
+  { icon: Wifi, label: "Networking & Simulation", desc: "VANET/ITS simulations with ns-3, SUMO & VAN3T" },
+  { icon: Brain, label: "ML / AI", desc: "Classical ML (scikit-learn), classification & tree-based models" },
 ];
 
 const AboutSection = () => {
@@ -31,10 +31,13 @@ const AboutSection = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-lg md:text-xl text-secondary-foreground leading-relaxed mb-16 max-w-3xl"
         >
-          Curious and driven by problem-solving, I enjoy tackling complex challenges that
-          bridge theoretical knowledge with practical applications. I thrive in collaborative
-          environments that foster innovation and creativity — from building quantum computer
-          simulators to defending decentralized ML systems against cyber threats.
+          Master's student in Computer Systems &amp; Networks / Cybersecurity at Chalmers
+          (graduating June 2026) with strong interest in distributed systems, networking,
+          simulation, and secure connected systems. Hands-on experience with VANET/ITS
+          simulations (ns-3, SUMO, VAN3T), implementing communication protocols and
+          distributed architectures (Erlang, Go), and researching security in decentralized
+          ML for battery management systems. I enjoy practical troubleshooting, data-driven
+          analysis, and collaborating to turn complex prototypes into reliable systems.
         </motion.p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">

@@ -1,48 +1,67 @@
 import { motion } from "framer-motion";
-import { ExternalLink, Shield, Car, Bug, Atom, Cpu, BookOpen } from "lucide-react";
+import { Shield, Car, Bug, Atom, Cpu, BookOpen, CircuitBoard, Network } from "lucide-react";
 
 const projects = [
   {
     icon: Atom,
     title: "Quantum Computer Simulator",
-    tag: "Bachelor Thesis",
-    description: "Python-based simulator with a graphical user interface to represent quantum circuits and gates. Built a foundational understanding of quantum computing from scratch.",
+    tag: "Bachelor Thesis · 2024",
+    description: "Built a Python-based quantum computer simulator with a GUI for visualizing quantum circuits, gates, and state evolution. Focused on correctness, debugging, and usability of engineering tools for complex models.",
     tech: ["Python", "GUI", "Quantum Computing"],
+    supervisor: "Robin Adams",
   },
   {
     icon: Shield,
     title: "Cybersecurity in Decentralized ML",
-    tag: "Master Thesis · Cognivity AI",
-    description: "Investigating cybersecurity of decentralized AI in battery management systems for vehicles and drones. Focused on threat exploitation, detection, and defense strategies.",
-    tech: ["Python", "Federated Learning", "Cybersecurity"],
+    tag: "Master Thesis · 2026 · Cognivity AI",
+    description: "Researching system threats, detection, and defense strategies for decentralized AI architectures in battery management systems (vehicles/drones). Documenting results in an engineering thesis format.",
+    tech: ["Cybersecurity", "Distributed Systems"],
+    supervisor: "Romaric Duvignau, Christian Fleischer",
   },
   {
     icon: Car,
     title: "Collaborative Perception in VANETs",
-    tag: "Research Project",
-    description: "Advancing collaborative perception systems for intelligent transportation using ns3, Van3t, and SUMO to simulate car traffic controlled by ITS.",
-    tech: ["ns3", "SUMO", "C++", "Networking"],
+    tag: "Research Project · 2025",
+    description: "Designed and evaluated collaborative perception scenarios for Intelligent Transportation Systems. Simulated traffic and network behavior, collected data, and iterated configurations to optimize performance and realism.",
+    tech: ["ns-3", "SUMO", "VAN3T"],
+    supervisor: "Elad Michael Schiller",
   },
   {
     icon: Bug,
     title: "Bee Pollen Detection (AI)",
-    tag: "Ericsson Garage",
-    description: "Developed an AI model to detect pollen in bee images and recorded videos, improving classification accuracy using machine learning techniques.",
+    tag: "Ericsson Garage · 2024",
+    description: "Developed an ML model to detect pollen in bee images and videos; improved classification through experimentation and iteration. Focused on practical ML workflow: data handling, evaluation, and model selection.",
     tech: ["Python", "ML", "Computer Vision"],
   },
   {
     icon: Cpu,
     title: "Mitigation in Decentralized FL",
-    tag: "Research Project",
-    description: "Exploring mitigation strategies for malicious users under different network topologies using the FENICS tool for decentralized federated learning simulation.",
-    tech: ["Python", "Federated Learning", "Security"],
+    tag: "Research Project · 2024",
+    description: "Explored mitigation strategies for malicious users under different network topologies in decentralized federated learning. Extended a simulator (FENICS) to study robustness and adversarial behavior.",
+    tech: ["Security", "Federated Learning"],
+    supervisor: "Yixing Zhang, Romaric Duvignau",
+  },
+  {
+    icon: CircuitBoard,
+    title: "Embedded Alarm System on MD407",
+    tag: "Course Project · 2023",
+    description: "Implemented a simple alarm system using the MD407 board, interfacing sensors with a central unit and communicating over CAS. Practiced embedded debugging and reliable system behavior.",
+    tech: ["C", "Embedded Systems"],
+    supervisor: "Sven Knutsson, Elias Hällqvist",
   },
   {
     icon: BookOpen,
     title: "High-Performance Parallel Computing",
-    tag: "Course Project",
-    description: "Development of high-performance hybrid software for parallel computing systems using NAS Parallel Benchmarks, focusing on hardware/software co-design.",
-    tech: ["C", "MPI", "OpenMP", "HPC"],
+    tag: "Course Project · 2023",
+    description: "Developed hybrid parallel software and evaluated performance/scalability using the NAS Parallel Benchmarks. Strengthened understanding of hardware/software co-design and parallel system trade-offs.",
+    tech: ["Performance Modeling", "HPC"],
+  },
+  {
+    icon: Network,
+    title: "Distributed Systems & Protocol Engineering",
+    tag: "Course Projects · 2023–2024",
+    description: "Developed custom protocols and communication systems using Erlang and Go; focused on concurrency and distributed computing. Designed and built a master–slave distributed system with a client/server architecture.",
+    tech: ["Erlang", "Go", "Distributed Systems"],
   },
 ];
 
@@ -87,11 +106,17 @@ const ProjectsSection = () => {
                   {project.title}
                 </h3>
 
-                <p className="text-sm text-muted-foreground leading-relaxed mb-5">
+                <p className="text-sm text-muted-foreground leading-relaxed mb-2">
                   {project.description}
                 </p>
 
-                <div className="flex flex-wrap gap-2">
+                {project.supervisor && (
+                  <p className="text-xs text-muted-foreground/60 italic mb-4">
+                    Supervisor(s): {project.supervisor}
+                  </p>
+                )}
+
+                <div className="flex flex-wrap gap-2 mt-auto">
                   {project.tech.map((t) => (
                     <span
                       key={t}

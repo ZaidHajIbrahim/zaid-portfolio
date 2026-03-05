@@ -2,20 +2,28 @@ import { motion } from "framer-motion";
 
 const skillCategories = [
   {
-    title: "Languages",
-    skills: ["Python", "C", "MATLAB", "Java", "Golang", "Erlang", "Assembly", "VHDL"],
+    title: "Programming",
+    skills: ["Python", "C", "Java", "Go", "Erlang", "MATLAB", "VHDL"],
   },
   {
-    title: "Domains",
-    skills: ["Cybersecurity", "AI & Machine Learning", "Distributed Systems", "Quantum Computing", "Parallel Computing"],
+    title: "Systems / Networking",
+    skills: ["Distributed Systems", "Protocol Design", "Network Simulation (ns-3, SUMO)", "Troubleshooting"],
   },
   {
-    title: "Tools & Frameworks",
-    skills: ["ns3", "SUMO", "Git", "Linux", "FENICS", "NAS Benchmarks"],
+    title: "Security",
+    skills: ["Cybersecurity", "Secure Connected Systems", "Adversarial / Federated Learning (Threats & Mitigation)"],
+  },
+  {
+    title: "ML / AI",
+    skills: ["Scikit-learn", "Classical ML", "Classification", "Tree-based Models"],
   },
   {
     title: "Languages Spoken",
     skills: ["Swedish", "English", "Arabic"],
+  },
+  {
+    title: "Myself",
+    skills: ["Curious", "Structured Problem-Solver", "Collaborative", "Self-dependent"],
   },
 ];
 
@@ -35,7 +43,7 @@ const SkillsSection = () => {
           <div className="section-line mb-10" />
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillCategories.map((cat, i) => (
             <motion.div
               key={cat.title}

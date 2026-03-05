@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, Github, Linkedin } from "lucide-react";
+import { Mail, Github, Linkedin, Phone } from "lucide-react";
 
 const ContactSection = () => {
   return (
@@ -23,13 +23,22 @@ const ContactSection = () => {
             If you would like to discuss any opportunities, please don't hesitate to reach out!
           </p>
 
-          <a
-            href="mailto:zaid.ibrahim.eng@gmail.com"
-            className="inline-flex items-center gap-3 px-8 py-3.5 rounded-lg bg-primary text-primary-foreground font-display text-sm font-semibold tracking-wider hover:shadow-[0_0_30px_hsl(175_80%_50%/0.3)] transition-all duration-300 hover:-translate-y-0.5"
-          >
-            <Mail className="w-4 h-4" />
-            Get in touch
-          </a>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+            <a
+              href="mailto:zaid.ibrahim.eng@gmail.com"
+              className="inline-flex items-center gap-3 px-8 py-3.5 rounded-lg bg-primary text-primary-foreground font-display text-sm font-semibold tracking-wider hover:shadow-[0_0_30px_hsl(175_80%_50%/0.3)] transition-all duration-300 hover:-translate-y-0.5"
+            >
+              <Mail className="w-4 h-4" />
+              Get in touch
+            </a>
+            <a
+              href="tel:+46722582306"
+              className="inline-flex items-center gap-3 px-8 py-3.5 rounded-lg border border-border bg-card/50 backdrop-blur-sm text-secondary-foreground font-display text-sm font-semibold tracking-wider hover:border-primary/50 hover:text-primary transition-all duration-300 hover:-translate-y-0.5"
+            >
+              <Phone className="w-4 h-4" />
+              (+46) 72-258 23 06
+            </a>
+          </div>
 
           <div className="flex items-center justify-center gap-6 mt-8">
             <a
@@ -41,7 +50,7 @@ const ContactSection = () => {
               <Github className="w-5 h-5" />
             </a>
             <a
-              href="https://linkedin.com/in/zaidhajibrahim"
+              href="https://www.linkedin.com/in/zaid-hajibrahim"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
